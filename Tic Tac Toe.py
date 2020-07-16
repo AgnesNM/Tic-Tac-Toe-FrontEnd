@@ -6,3 +6,8 @@ import tkinter.messagebox
 
 #create a Tk instance to help us use Tk methods
 root = Tk()
+
+
+root.title("Tic Tac Toe")
+
+
