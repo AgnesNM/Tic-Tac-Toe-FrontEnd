@@ -1,19 +1,19 @@
 #import tkinter to create GUI
 from tkinter import *
 
-#import tkinter submodule, messagebox, to help us show the game results
+#help us show the winner or draw
 import tkinter.messagebox
 
-#create a Tk instance to help us use Tk methods
+#create an instance of Tk in order to use Tk methods
 root = Tk()
 
-#change the application's title
-root.title("Tic Tac Toe")
+#changing the title
+root.title('Tic Tac Toe')
 
 #prevent the user from resizing the window
-root.resizable(False, False)
+root.resizable(False,False)
 
-#create local variables
+#create global variables
 click = True
 
 #counts the number of moves. If there are 9 moves, then it's a draw
@@ -54,6 +54,3 @@ def clear_game():
 
 #create an event handler
 root.mainloop()
-
-
-
