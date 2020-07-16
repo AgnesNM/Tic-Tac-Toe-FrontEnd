@@ -11,5 +11,5 @@ root = Tk()
 root.title("Tic Tac Toe")
 
 #prevent the user from resizing the window
-root.resizable(height = False, width = False)
+root.resizable(False, False)
 
