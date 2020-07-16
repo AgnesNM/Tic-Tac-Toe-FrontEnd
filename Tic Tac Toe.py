@@ -52,6 +52,8 @@ def check_winner():
 def clear_game():
     pass
 
+#create an event handler
+root.mainloop()
 
 
 
