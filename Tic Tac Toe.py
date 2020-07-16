@@ -13,3 +13,8 @@ root.title("Tic Tac Toe")
 #prevent the user from resizing the window
 root.resizable(False, False)
 
+#create local variables
+click = True
+
+#counts the number of moves. If there are 9 moves, then it's a draw
+count = 0
