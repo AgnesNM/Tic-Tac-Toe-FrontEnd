@@ -7,7 +7,9 @@ import tkinter.messagebox
 #create a Tk instance to help us use Tk methods
 root = Tk()
 
-
+#change the application's title
 root.title("Tic Tac Toe")
 
+#prevent the user from resizing the window
+root.resizable(height = False, width = False)
 
