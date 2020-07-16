@@ -18,3 +18,14 @@ click = True
 
 #counts the number of moves. If there are 9 moves, then it's a draw
 count = 0
+
+#create string variables which will be associated with user input
+btn1 = StringVar()
+btn2 = StringVar()
+btn3 = StringVar()
+btn4 = StringVar()
+btn5 = StringVar()
+btn6 = StringVar()
+btn7 = StringVar()
+btn8 = StringVar()
+btn9 = StringVar()
