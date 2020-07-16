@@ -29,3 +29,9 @@ btn6 = StringVar()
 btn7 = StringVar()
 btn8 = StringVar()
 btn9 = StringVar()
+
+#store x and o into variables
+xPhoto = PhotoImage(file = "x.png")
+oPhoto = PhotoImage(file = "o.png")
+
+
