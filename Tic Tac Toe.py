@@ -34,4 +34,24 @@ btn9 = StringVar()
 xPhoto = PhotoImage(file = "x.png")
 oPhoto = PhotoImage(file = "o.png")
 
+#create the main functions we will use in the game
+
+#main game function
+def game():
+    pass
+
+#function to check for the pressed button
+def btn_press():
+    pass
+
+#function to check for a winner
+def check_winner():
+    pass
+
+#function to clear game
+def clear_game():
+    pass
+
+
+
 
