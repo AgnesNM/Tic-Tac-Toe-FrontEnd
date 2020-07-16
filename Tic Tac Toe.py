@@ -39,7 +39,7 @@ oPhoto = PhotoImage(file = "o.png")
 #main game function
 def game():
     '''CREATE THE BUTTONS THAT WILL ASSOCIATE USER INPUT WITH THE PREVIOUSLY DEFINED STRING VARIABLES'''
-    
+
     button1 = Button(root, height=9, width=19, relief="ridge", borderwidth=5, background="#EFBBFF", command=lambda:btn_press(1,0,0))
     button1.grid(row=0,column=0)
 
@@ -71,9 +71,68 @@ game()
 
 #function to check for the pressed button
 def btn_press(num, r, c):
-    '''GRAB THE BUTTON NUMBER THE USER CLICKS ON - VARIABLE NUM, AND THE LOCATIONON THE WINDOW - r FOR ROW AND c FOR COLUMN'''
-    
+    '''GRAB THE BUTTON NUMBER THE USER CLICKS ON - VARIABLE NUM, AND THE LOCATION ON THE WINDOW - r FOR ROW AND c FOR COLUMN'''
 
+    '''DISPLAY THE USER INPUT ON THE SPECIFIC BUTTON LOCATION ON THE WINDOW'''
+    #import the previously defined global variables - count and click
+
+    global count,click
+
+    if click == True:
+        labelPhoto = Label(root, image =xPhoto)
+        labelPhoto.grid(row=r,column=c)
+
+        if num==1:
+            btn1.set('x')
+        elif num == 2:
+            btn2.set('x') 
+        elif num == 3:
+            btn3.set('x')
+        elif num == 4:
+            btn4.set('x')
+        elif num == 5:
+            btn5.set('x') 
+        elif num == 6:
+            btn6.set('x')
+        elif num == 7:
+            btn7.set('x')
+        elif num == 8:
+            btn8.set('x')
+        else:
+            btn9.set('x')
+
+        #redefine the click to be False and increment the number ofclicked buttons by 1
+        click = False
+        count += 1
+
+    #when click is false (when the user changes the button)
+    else:
+        labelPhoto = Label(root, image = oPhoto)
+        labelPhoto.grid(row = r, column = c)
+
+        if num == 1:
+            btn1.set('o')
+        elif num == 2:
+            btn2.set('o') 
+        elif num == 3:
+            btn3.set('o')
+        elif num == 4:
+            btn4.set('o')
+        elif num == 5:
+            btn5.set('o') 
+        elif num == 6:
+            btn6.set('o')
+        elif num == 7:
+            btn7.set('o')
+        elif num == 8:
+            btn8.set('o')
+        else:
+            btn9.set('o')
+
+        #redefine the click to be True and increment the number of clicked buttons by 1
+        click = True
+        count += 1  
+    
 #function to check for a winner
 def check_winner():
     pass
