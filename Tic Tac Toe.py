@@ -1,2 +1,5 @@
 #import tkinter to create GUI
 from tkinter import *
+
+#import tkinter submodule, messagebox, to help us show the game results
+import tkinter.messagebox
