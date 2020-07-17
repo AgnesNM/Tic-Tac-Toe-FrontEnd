@@ -180,8 +180,13 @@ def check_winner():
     diag1 = btn1.get() == 'o' and btn5.get() == 'o' and btn9.get() == 'o' != ' '
     diag2 = btn3.get() == 'o' and btn5.get() == 'o' and btn7.get() == 'o' != ' '
 
+    '''CHECK VERTICALS FOR 3 CONSECUTIVE O'S'''
+    vert1 = btn1.get() == 'o' and btn4.get() == 'o' and btn7.get() == 'o' != ' '
+    vert2 = btn2.get() == 'o' and btn5.get() == 'o' and btn8.get() == 'o' != ' '
+    vert3 = btn3.get() == 'o' and btn6.get() == 'o' and btn9.get() == 'o' != ' '
 
-    if (row1 or row2 or row3) or (diag1 or diag2):
+
+    if (row1 or row2 or row3) or (diag1 or diag2) or (vert1 or vert2 or vert3):
         tkinter.messagebox.showinfo("Tic Tac Toe", "Player o wins")
 
         #restart count for a new game
