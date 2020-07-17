@@ -141,6 +141,7 @@ def btn_press(num, r, c):
     
 #function to check for a winner
 def check_winner():
+
     '''CHECK ROWS FOR 3 CONSECUTIVE X'S'''
     row1 = btn1.get() == 'x' and btn2.get() == 'x' and btn3.get() == 'x' != ' '
     row2 = btn4.get() == 'x' and btn5.get() == 'x' and btn6.get() == 'x' != ' '
@@ -160,6 +161,24 @@ def check_winner():
 
         #set click to true so that the first image should always be x after game reset
         click = True
+
+        #restart count for a new game
+        count = 0
+
+        #clears the displayed input from the last game
+        clear_game()
+
+        #resets the game
+        game()
+
+    '''CHECK ROWS FOR 3 CONSECUTIVE O'S'''
+    row1 = btn1.get() == 'o' and btn2.get() == 'o' and btn3.get() == 'o' != ' '
+    row2 = btn4.get() == 'o' and btn5.get() == 'o' and btn6.get() == 'o' != ' '
+    row3 = btn7.get() == 'o' and btn8.get() == 'o' and btn9.get() == 'o' != ' '
+
+
+    if (row1 or row2 or row3):
+        tkinter.messagebox.showinfo("Tic Tac Toe", "Player o wins")
 
         #restart count for a new game
         count = 0
