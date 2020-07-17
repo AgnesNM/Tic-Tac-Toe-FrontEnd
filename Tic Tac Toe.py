@@ -67,7 +67,6 @@ def game():
     button9 = Button(root, height=9, width=19,relief='ridge',borderwidth=5,background='#BE29EC', textvariable=btn9,command=lambda:btn_press(9,2,2))
     button9.grid(row=2,column=2)
 
-game()
 
 #function to check for the pressed button
 def btn_press(num, r, c):
@@ -105,6 +104,9 @@ def btn_press(num, r, c):
         click = False
         count += 1
 
+        #check whether there is a win or tie
+        check_winner()
+
     #when click is false (when the user changes the button)
     else:
         labelPhoto = Label(root, image = oPhoto)
@@ -131,7 +133,10 @@ def btn_press(num, r, c):
 
         #redefine the click to be True and increment the number of clicked buttons by 1
         click = True
-        count += 1  
+        count += 1
+
+        #check whether there is a winner or if there is a tie
+        check_winner()  
     
 #function to check for a winner
 def check_winner():
