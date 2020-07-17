@@ -141,7 +141,7 @@ def btn_press(num, r, c):
     
 #function to check for a winner
 def check_winner():
-
+    global click, count
     '''CHECK ROWS FOR 3 CONSECUTIVE X'S'''
     row1 = btn1.get() == 'x' and btn2.get() == 'x' and btn3.get() == 'x' != ' '
     row2 = btn4.get() == 'x' and btn5.get() == 'x' and btn6.get() == 'x' != ' '
@@ -196,7 +196,15 @@ def check_winner():
         clear_game()
 
         #resets the game
-        game()     
+        game()
+    
+    '''CHECK FOR A DRAW'''
+    if count == 9:
+        tkinter.messagebox.showinfo(title="Tic Tac Toe",message="It's a draw")
+        click = True
+        
+        clear_game()
+        game()         
 
 #function to clear game
 def clear_game():
