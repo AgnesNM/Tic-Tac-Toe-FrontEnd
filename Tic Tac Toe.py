@@ -67,6 +67,7 @@ def game():
     button9 = Button(root, height=9, width=19,relief='ridge',borderwidth=5,background='#BE29EC', textvariable=btn9,command=lambda:btn_press(9,2,2))
     button9.grid(row=2,column=2)
 
+game()
 
 #function to check for the pressed button
 def btn_press(num, r, c):
@@ -140,7 +141,25 @@ def btn_press(num, r, c):
     
 #function to check for a winner
 def check_winner():
-    pass
+    '''CHECK ROWS FOR X'''
+    row1 = btn1.get() == 'x' and btn2.get() == 'x' and btn3.get() == 'x' != ' '
+    row2 = btn4.get() == 'x' and btn5.get() == 'x' and btn6.get() == 'x' != ' '
+    row3 = btn7.get() == 'x' and btn8.get() == 'x' and btn9.get() == 'x' != ' '   
+    
+    if row1 or row2 or row3:
+        tkinter.messagebox.showinfo("Tic Tac Toe", "Player x wins")
+
+        #set click to true so that the first image should always be x after game reset
+        click = True
+
+        #restart count for a new game
+        count = 0
+
+        #clears the displayed input from the last game
+        clear_game()
+
+        #resets the game
+        game()     
 
 #function to clear game
 def clear_game():
