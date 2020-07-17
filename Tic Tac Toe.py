@@ -141,12 +141,16 @@ def btn_press(num, r, c):
     
 #function to check for a winner
 def check_winner():
-    '''CHECK ROWS FOR X'''
+    '''CHECK ROWS FOR 3 CONSECUTIVE X'S'''
     row1 = btn1.get() == 'x' and btn2.get() == 'x' and btn3.get() == 'x' != ' '
     row2 = btn4.get() == 'x' and btn5.get() == 'x' and btn6.get() == 'x' != ' '
-    row3 = btn7.get() == 'x' and btn8.get() == 'x' and btn9.get() == 'x' != ' '   
-    
-    if row1 or row2 or row3:
+    row3 = btn7.get() == 'x' and btn8.get() == 'x' and btn9.get() == 'x' != ' '
+
+    '''CHECK DIAGONALS FOR 3 CONSECUTIVE X'S'''
+    diag1 = btn1.get() == 'x' and btn5.get() == 'x' and btn9.get() == 'x' != ' '
+    diag2 = btn3.get() == 'x' and btn5.get() == 'x' and btn7.get() == 'x' != ' '
+        
+    if (row1 or row2 or row3) or (diag1 or diag2):
         tkinter.messagebox.showinfo("Tic Tac Toe", "Player x wins")
 
         #set click to true so that the first image should always be x after game reset
