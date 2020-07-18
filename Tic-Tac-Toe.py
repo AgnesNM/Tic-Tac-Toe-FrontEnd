@@ -208,7 +208,15 @@ def check_winner():
 
 #function to clear game
 def clear_game():
-    pass
+    btn1.set('')
+    btn2.set('')
+    btn3.set('')
+    btn4.set('')
+    btn5.set('')
+    btn6.set('')
+    btn7.set('')
+    btn8.set('')
+    btn9.set('')
 
 #create an event handler
 root.mainloop()
