@@ -4,6 +4,10 @@ from tkinter import *
 #help us show the winner or draw
 import tkinter.messagebox
 
+#choose players
+def choose_players(player_num):
+    tkinter.messagebox.showinfo("Player", "Start the game, player %s" % player_num)
+
 #create an instance of Tk in order to use Tk methods
 root = Tk()
 
@@ -11,7 +15,16 @@ root = Tk()
 root.title('Tic Tac Toe')
 
 #show game instructions
-tkinter.messagebox.showinfo("Instructions", " Welcome to Tic Tac Toe. You need to enter  3 consecutive x's or o's in order to win")
+tkinter.messagebox.showinfo("Instructions", " Welcome to Tic Tac Toe. You need to enter 3 consecutive x's or o's in order to win")
+
+playerEntry = Entry(root)
+playerEntry.grid(row=0,column=1)
+
+playerLabel = Label(root, text="Enter player: ")
+playerLabel.grid(row=0, column=0)
+
+playerButton = Button(root, text = "Submit",command = (lambda:choose_players(playerEntry.get())))
+playerButton.grid(row=1, column=0)
 
 #prevent the user from resizing the window
 root.resizable(False,False)
