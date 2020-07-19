@@ -1,5 +1,5 @@
 # Tic Tac Toe
-Tic Tac Toe is my first ever Python frontend project. I have used tkinter as a GUI. Download executable files here: (https://drive.google.com/drive/folders/1NhpiGLU6WbVXE3QGhrr2TicfhP22tXTt?usp=sharing)
+Tic Tac Toe is my first ever Python frontend project. I have used tkinter as a GUI. Download executable files here: (https://drive.google.com/drive/folders/1NhpiGLU6WbVXE3QGhrr2TicfhP22tXTt?usp=sharing). You will find it in the Dist folder.
 
 #### 16th July 2020
 #### Agnes Mwaniki (agnesndutamwaniki@gmail.com)
