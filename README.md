@@ -23,10 +23,10 @@ The technologies used this far:
 If you would like to contribute to this project, the following BDD specs should help you:smile:
 
 Behavior                                           |  Input Example    | Output Example
----------------------------------------------------|------------------ |----------------------------------
-Assign x or o on user click                        |      [x]          |         [x]
-Allow the user to see whether they have won        |      []           |         [Player x wins]
-Allow the user to see whether it's a draw          |      []           |         [It's a draw]
+---------------------------------------------------|------------------------------------------|--------------------------
+Assign x or o on user click                        | [x]                                      | [x]
+Allow the user to see whether they have won        | [x,x,x]                                  | [Player x wins]
+Allow the user to see whether it's a draw          | 9 entries with noconsecyutive x's or o's | [It's a draw]
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 # Tic-Tac-Toe-FrontEnd
