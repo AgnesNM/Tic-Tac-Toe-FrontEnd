@@ -10,6 +10,9 @@ root = Tk()
 #changing the title
 root.title('Tic Tac Toe')
 
+#show game instructions
+tkinter.messagebox.showinfo("Instructions", "You need to enter  3 consecutive x's or o's in order to win")
+
 #prevent the user from resizing the window
 root.resizable(False,False)
 
