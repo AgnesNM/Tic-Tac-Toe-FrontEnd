@@ -4,10 +4,6 @@ from tkinter import *
 #help us show the winner or draw
 import tkinter.messagebox
 
-#choose players
-def choose_players(player_num):
-    tkinter.messagebox.showinfo("Player", "Start the game, player %s" % player_num)
-
 #create an instance of Tk in order to use Tk methods
 root = Tk()
 
@@ -17,18 +13,14 @@ root.title('Tic Tac Toe')
 #show game instructions
 tkinter.messagebox.showinfo("Instructions", " Welcome to Tic Tac Toe. You need to enter 3 consecutive x's or o's in order to win")
 
-#display player widgets
-playerEntry = Entry(root)
-playerEntry.grid(row=0,column=1)
-
-playerLabel = Label(root, text="Enter player: ")
-playerLabel.grid(row=0, column=0)
-
-playerButton = Button(root, text = "Submit",command = (lambda:choose_players(playerEntry.get())))
-playerButton.grid(row=1, column=0)
-
 #prevent the user from resizing the window
 root.resizable(False,False)
+
+player1Button = Button(root, text="Player 1")
+player1Button.grid()
+
+player2Button = Button(root, text="Player 2")
+player2Button.grid()
 
 #create global variables
 click = True
@@ -101,22 +93,31 @@ def btn_press(num, r, c):
 
         if num==1:
             btn1.set('x')
+            player1Button.focus_set()
         elif num == 2:
-            btn2.set('x') 
+            btn2.set('x')
+            player1Button.focus_set() 
         elif num == 3:
             btn3.set('x')
+            player1Button.focus_set()
         elif num == 4:
             btn4.set('x')
+            player1Button.focus_set()
         elif num == 5:
             btn5.set('x') 
+            player1Button.focus_set()
         elif num == 6:
             btn6.set('x')
+            player1Button.focus_set()
         elif num == 7:
             btn7.set('x')
+            player1Button.focus_set()
         elif num == 8:
             btn8.set('x')
+            player1Button.focus_set()
         else:
             btn9.set('x')
+            player1Button.focus_set()
 
         #redefine the click to be False and increment the number ofclicked buttons by 1
         click = False
@@ -132,22 +133,31 @@ def btn_press(num, r, c):
 
         if num == 1:
             btn1.set('o')
+            player2Button.focus_set()
         elif num == 2:
             btn2.set('o') 
+            player2Button.focus_set()
         elif num == 3:
             btn3.set('o')
+            player2Button.focus_set()
         elif num == 4:
             btn4.set('o')
+            player2Button.focus_set()
         elif num == 5:
-            btn5.set('o') 
+            btn5.set('o')
+            player2Button.focus_set() 
         elif num == 6:
             btn6.set('o')
+            player2Button.focus_set()
         elif num == 7:
             btn7.set('o')
+            player2Button.focus_set()
         elif num == 8:
             btn8.set('o')
+            player2Button.focus_set()
         else:
             btn9.set('o')
+            player2Button.focus_set()
 
         #redefine the click to be True and increment the number of clicked buttons by 1
         click = True
