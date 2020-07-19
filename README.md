@@ -24,9 +24,9 @@ If you would like to contribute to this project, the following BDD specs should 
 
 Behavior                                           |  Input Example    | Output Example
 ---------------------------------------------------|------------------ |----------------------------------
-Allow the user to enter x or o                     |      [x]          |         [x]
-Allow the user to see whether they have won        |      []           |         [Player 1 wins]
-Allow the user to restart the game                 | [Restart game?Yes]|         [Welcome to Tic Toe]
+Assign x or o on user click                        |      [x]          |         [x]
+Allow the user to see whether they have won        |      []           |         [Player x wins]
+Allow the user to see whether it's a draw          |      []           |         [It's a draw]
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 # Tic-Tac-Toe-FrontEnd
