@@ -1,5 +1,5 @@
 # Tic Tac Toe
-Tic Tac Toe is my first ever Python frontend project. I have used tkinter as a GUI.
+Tic Tac Toe is my first ever Python frontend project. I have used tkinter as a GUI. Download [![executable files](https://drive.google.com/drive/folders/1NhpiGLU6WbVXE3QGhrr2TicfhP22tXTt?usp=sharing)]
 
 #### 16th July 2020
 #### Agnes Mwaniki (agnesndutamwaniki@gmail.com)
@@ -15,8 +15,9 @@ The technologies used this far:
 * Linux OS
 * Text Editor (Atom, Visual Studio Code)
 * Linux Terminal
-* At least Python 3.7+ (for Python 3.6 and below, you needto install Tk/Tcl 8.5+ here: (https://tkdocs.com/tutorial/install.html) - ensure that you have chosen Python as the language of interest on the right tab 
+* At least Python 3.7+ (for Python 3.6 and below, you needto install [![Tk/Tcl 8.5+](https://tkdocs.com/tutorial/install.html)] - ensure that you have chosen Python as the language of interest on the right tab 
 * The tkinter module
+* PyInstaller (to convert the app to an executable file that you can download and use on [![Windows](https://drive.google.com/drive/folders/1NhpiGLU6WbVXE3QGhrr2TicfhP22tXTt?usp=sharing). For [[!Linux] (https://wiki.winehq.org/Download)] users you need to install [[!Wine] (https://wiki.winehq.org/Download)] or use [![PlayOnLinux] (https://youtu.be/EqKIRGTAUB8)]
 
 ## Contribution - BDD
 If you would like to contribute to this project, the following BDD specs should help you:smile:

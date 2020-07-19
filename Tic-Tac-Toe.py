@@ -11,16 +11,20 @@ root = Tk()
 root.title('Tic Tac Toe')
 
 #show game instructions
-tkinter.messagebox.showinfo("Instructions", " Welcome to Tic Tac Toe. You need to enter 3 consecutive x's or o's in order to win")
+tkinter.messagebox.showinfo("Instructions", " Welcome to Tic Tac Toe. You need to enter 3 consecutive x's or o's in order to win. Place your x or o in a corresponding position")
 
 #prevent the user from resizing the window
 root.resizable(False,False)
 
+#switch players and change button focus as the players play
+playerLabel = Label(root, text="Players:")
+playerLabel.grid(row=0,column=0)
+
 player1Button = Button(root, text="Player 1")
-player1Button.grid()
+player1Button.grid(row=1,column=0)
 
 player2Button = Button(root, text="Player 2")
-player2Button.grid()
+player2Button.grid(row=1,column=1)
 
 #create global variables
 click = True
@@ -119,12 +123,12 @@ def btn_press(num, r, c):
             btn9.set('x')
             player1Button.focus_set()
 
-        #redefine the click to be False and increment the number ofclicked buttons by 1
+        #redefine the click to be False and increment the number of clicked buttons by 1
         click = False
         count += 1
 
         #check whether there is a win or tie
-        check_winner()
+        check_winner()             
 
     #when click is false (when the user changes the button)
     else:
@@ -164,7 +168,7 @@ def btn_press(num, r, c):
         count += 1
 
         #check whether there is a winner or if there is a tie
-        check_winner()  
+        check_winner()          
     
 #function to check for a winner
 def check_winner():
@@ -184,8 +188,8 @@ def check_winner():
     vert3 = btn3.get() == 'x' and btn6.get() == 'x' and btn9.get() == 'x' != ' '
         
     if (row1 or row2 or row3) or (diag1 or diag2) or (vert1 or vert2 or vert3):
-        tkinter.messagebox.showinfo("Tic Tac Toe", "Player x wins")
-
+        tkinter.messagebox.showinfo("Tic Tac Toe", "Player x wins")     
+              
         #set click to true so that the first image should always be x after game reset
         click = True
 
@@ -214,7 +218,7 @@ def check_winner():
 
 
     if (row1 or row2 or row3) or (diag1 or diag2) or (vert1 or vert2 or vert3):
-        tkinter.messagebox.showinfo("Tic Tac Toe", "Player o wins")
+        tkinter.messagebox.showinfo("Tic Tac Toe", "Player o wins")        
 
         #restart count for a new game
         count = 0
@@ -228,8 +232,8 @@ def check_winner():
     '''CHECK FOR A DRAW'''
     if count == 9:
         tkinter.messagebox.showinfo(title="Tic Tac Toe",message="It's a draw")
-        click = True
-        
+
+        click = True        
         clear_game()
         game()         
 
