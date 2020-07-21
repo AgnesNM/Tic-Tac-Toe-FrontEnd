@@ -74,7 +74,7 @@
  [],
  False,
  False,
- 1595130532,
+ 1595327302,
  [('run',
    '/home/nduta/.local/lib/python2.7/site-packages/PyInstaller/bootloader/Linux-64bit/run',
    'EXECUTABLE')])
